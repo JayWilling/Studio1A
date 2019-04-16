@@ -1,3 +1,4 @@
+package com.example.studio1a;
 import java.util.Date;
 
 class Booking {

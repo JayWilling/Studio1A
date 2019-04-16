@@ -1,3 +1,4 @@
+package com.example.studio1a;
 import java.util.Date;
 
 class TimeSlot {
@@ -14,7 +15,7 @@ class TimeSlot {
         this.userID = userID;
 
         Date curDate = new Date();
-        datetime = curDate.toString();
+        datetime = curDate;
     }
 
     /**

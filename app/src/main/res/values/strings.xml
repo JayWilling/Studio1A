@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Studio1A</string>
+    <string name="title_activity_registration">RegistrationActivity</string>
 </resources>
