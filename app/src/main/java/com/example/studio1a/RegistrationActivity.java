@@ -76,7 +76,28 @@ public class RegistrationActivity extends AppCompatActivity {
         CollectionReference userRef = db.collection("users");
         userRef.whereEqualTo("Email", cEmail);
 
+        DatabaseHelper dbHelper = new DatabaseHelper();
+        if (dbHelper.findExistingUser(cEmail)) {
+            AlertDialog dialog = new AlertDialog.Builder(context)
+                    .setTitle("Incorrect Information")
+                    .setMessage("A user with this email already exists. \n" +
+                            "Please enter a different email.")
+                    .setNegativeButton(android.R.string.ok, null)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+        } else {
+            dbHelper.storeNewUser(user);
+        }
 
+/**
+ * The code above calls the DatabaseHelper class file and carries out the exact same
+ * function as shown, commented out, below. For some reason at the time of pushing to git, the
+ * above code and the code in the LoginActivity java file does not function as expected (The check
+ * for an existing account with the same email always returns false and thus always saves the
+ * entered data).
+ * Feel free to edit the DatabaseHelper file and use the code below as reference.
+ *
+ *
         userRef.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -114,12 +135,11 @@ public class RegistrationActivity extends AppCompatActivity {
                 }
             }
         });
+ */
+        finish();
     }
 
-    
-
-
-
-
-
+    public void closeOnClick(View view) {
+        finish();
+    }
 }

@@ -60,4 +60,13 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+    public void registerActivity(View view) {
+        Intent intent = new Intent(this, RegistrationActivity.class);
+        startActivity(intent);
+    }
+
+    public void loginActivity(View view) {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
 }
