@@ -8,6 +8,117 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:134031838491:android:54a7e4cbb1f05387",
+        "android_client_info": {
+          "package_name": "com.example.googlemapsintegration"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134031838491-b4kq9b6ic9v6j0dr1pphin4p2tc2j3p8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.googlemapsintegration",
+            "certificate_hash": "c4b9ffabd75e1db70ccab19f86dadb6e6366e296"
+          }
+        },
+        {
+          "client_id": "134031838491-0gghhif4i65fvukc3m6d0pd3f7jjgkus.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyjOXKxkuIEPinkybP2_2QGoNNKUvi-kk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134031838491-0gghhif4i65fvukc3m6d0pd3f7jjgkus.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134031838491:android:472874630b2dac56",
+        "android_client_info": {
+          "package_name": "com.example.sengstudio1a"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134031838491-ipcmkm9beibjikrvgd9fd5vg12cd7qkr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sengstudio1a",
+            "certificate_hash": "c4b9ffabd75e1db70ccab19f86dadb6e6366e296"
+          }
+        },
+        {
+          "client_id": "134031838491-0gghhif4i65fvukc3m6d0pd3f7jjgkus.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyjOXKxkuIEPinkybP2_2QGoNNKUvi-kk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134031838491-0gghhif4i65fvukc3m6d0pd3f7jjgkus.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134031838491:android:e4c5d002d96bedde",
+        "android_client_info": {
+          "package_name": "com.example.ses_1a"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134031838491-gno8pnuj2dpnv1dsmebr8liin6ugu8pa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ses_1a",
+            "certificate_hash": "98efddbf849aba5d6722b477c958e04fffe6317a"
+          }
+        },
+        {
+          "client_id": "134031838491-0gghhif4i65fvukc3m6d0pd3f7jjgkus.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyjOXKxkuIEPinkybP2_2QGoNNKUvi-kk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134031838491-0gghhif4i65fvukc3m6d0pd3f7jjgkus.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:134031838491:android:24178c7e11364140",
         "android_client_info": {
           "package_name": "com.example.studio1a"
@@ -15,10 +126,71 @@
       },
       "oauth_client": [
         {
+          "client_id": "134031838491-3tjl0cd6rip8njng09eu73ubm54h33o0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studio1a",
+            "certificate_hash": "e578172beee0870b73de4504b31e524d9455046a"
+          }
+        },
+        {
+          "client_id": "134031838491-h69h6vjfobot0jg9kotfnd0nimhvbrir.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studio1a",
+            "certificate_hash": "98efddbf849aba5d6722b477c958e04fffe6317a"
+          }
+        },
+        {
           "client_id": "134031838491-ib47ji88hsbq3p5tlq4d18o61gtik7kb.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.studio1a",
+            "certificate_hash": "1df2ecdce813b5662022638739f085e2c667b90f"
+          }
+        },
+        {
+          "client_id": "134031838491-0gghhif4i65fvukc3m6d0pd3f7jjgkus.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyjOXKxkuIEPinkybP2_2QGoNNKUvi-kk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134031838491-0gghhif4i65fvukc3m6d0pd3f7jjgkus.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134031838491:android:69f7c19b46c405f2",
+        "android_client_info": {
+          "package_name": "com.example.studiomerge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134031838491-eli2ldnphq4t8riqo4cj04njidrgv4an.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studiomerge",
+            "certificate_hash": "5b2ed74a549344af07aa4ede19120d7821409619"
+          }
+        },
+        {
+          "client_id": "134031838491-eqd78laduk4agjgjdlt2b70u2v52dbii.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studiomerge",
             "certificate_hash": "1df2ecdce813b5662022638739f085e2c667b90f"
           }
         },

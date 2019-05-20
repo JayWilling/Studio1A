@@ -1,17 +1,33 @@
 <resources>
-    <string name="app_name">Studio1A</string>
-    <string name="title_activity_registration">RegistrationActivity</string>
-    <string name="title_activity_login">Sign in</string>
-    <!-- Strings related to login -->
+    <string name="app_name">StudioMerge</string>
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
+    <string name="prompt_password">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_no_account">No account? Create one</string>
+    <string name="error_incorrect_credentials">Incorrect username or password.</string>
+    <string name="error_email_unverified">Email has not been verified.</string>
+    <string name="tv_select_user_type">Select User Type</string>
+    <string name="btn_donor">Donor</string>
+    <string name="btn_charity">Charity</string>
+    <string name="btn_already_member">Already a member? Login</string>
+    <string name="prompt_fname">First name</string>
+    <string name="prompt_lname">Last name</string>
+    <string name="prompt_phone">Phone number (optional)</string>
+    <string name="btn_create_account">Create Account</string>
+    <string name="error_empty_field">This field cannot be empty.</string>
+    <string name="error_invalid_name">Cannot have any numbers or begin with a space.</string>
+    <string name="error_invalid_password">Must be 4-16 characters long and contain at least one number, symbol, lowercase and uppercase letter.</string>
+    <string name="error_email_unavailable">Email is already registered.</string>
+    <string name="error_invalid_email">Invalid email address.</string>
+    <string name="error_invalid_phone">Must be a 10-digit mobile number.</string>
+    <string name="prompt_organisation">Organisation</string>
+    <string name="prompt_address">Address</string>
+    <string name="prompt_state">State</string>
+    <string name="prompt_postcode">Postcode</string>
+    <string name="btn_resend_email">Resend Email</string>
+    <string name="btn_continue">Continue</string>
+    <string name="tv_registration_successful">
+        Your account has been registered successfully.\n\n
+        Please verify your account using the link in the email we have just sent you.
     </string>
 </resources>
