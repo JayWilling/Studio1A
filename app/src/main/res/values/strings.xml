@@ -30,4 +30,6 @@
         Your account has been registered successfully.\n\n
         Please verify your account using the link in the email we have just sent you.
     </string>
+    <string name="tv_donor">Donor</string>
+    <string name="tv_charity">Charity</string>
 </resources>
