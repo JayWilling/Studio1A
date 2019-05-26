@@ -32,4 +32,30 @@
     </string>
     <string name="tv_donor">Donor</string>
     <string name="tv_charity">Charity</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="book">Book</string>
+    <string name="view">Booking History</string>
+    <string name="calendar">Calendar</string>
+    <string name="title_activity_book__time">Book_Time</string>
+    <string name="title_activity_booking__time">booking_Time</string>
+    <string name="booking_header_text">Book an Appointment</string>
+    <string name="view_bookings">This will be filled in as we values for the database</string>
+    <string name="title_activity_view__bookings">view_Bookings</string>
+    <string name="charity">Charity</string>
+    <string name="name_of_desired_charity">Name of desired charity</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="helping_hands">Helping Hands</string>
+    <string name="enter_your_email_address">Enter your email address</string>
+    <string name="email">Email</string>
+    <string name="title_activity_book_time_charity">book_time_charity</string>
+    <string name="create_an_event">Create an event</string>
+    <string name="event">Event</string>
+    <string name="enter_the_name_of_your_event">Enter the name of your event</string>
+    <string name="create">Create</string>
+    <string name="create_an_event_header">Create an Event</string>
+    <string name="enter_your_event_name">Enter your event name</string>
 </resources>

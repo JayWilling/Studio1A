@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.example.studiomerge.lib.Constant;
 import com.example.studiomerge.lib.MultiObservable;
@@ -42,6 +43,8 @@ public class Profile extends AppCompatActivity implements OnMapReadyCallback {
         SupportMapFragment mapFragment = (SupportMapFragment)
                 getSupportFragmentManager().findFragmentById(R.id.googleMap);
         mapFragment.getMapAsync(this);
+
+        populateFields();
     }
 
     /**
@@ -160,5 +163,73 @@ public class Profile extends AppCompatActivity implements OnMapReadyCallback {
         } catch (IllegalArgumentException e) {
             Log.w(TAG, "Cannot initialise map on null location.", e);
         }
+    }
+
+    /**
+     * Extract the email of the charity from the calling Intent and
+     * search the database for its other details, then populate the
+     * relevant fields.
+     *
+     * Fails if there is no charity with the extracted email in the
+     * database.
+     *
+     * The email is extracted using the Constant.PROFILE_EMAIL String.
+     */
+    private void populateFields() {
+        final String email = getIntent().getStringExtra(Constant.PROFILE_EMAIL);
+
+        /**
+         * Setup an observable to handle the results of the search
+         * query.
+         *
+         * If a charity was found with the extracted email, populate
+         * the relevant fields.
+         */
+        final MultiObservable<String[]> charityDoc = new MultiObservable<>();
+        charityDoc.addObserver(new Observer() {
+            @Override
+            public void update(Observable o, Object arg) {
+                TextView tvName = findViewById(R.id.tvName);
+                TextView tvEmail = findViewById(R.id.tvEmail);
+                TextView tvPhone = findViewById(R.id.tvPhone);
+
+                tvName.setText(((String[]) arg)[0]);
+                tvEmail.setText(((String[]) arg)[1]);
+                tvPhone.setText(((String[]) arg)[2]);
+            }
+        });
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("users")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            int count = 0;
+                            for (QueryDocumentSnapshot doc : task.getResult()) {
+                                if (
+                                        doc.get("type").equals("charity")
+                                                && doc.get("email").equals(email)
+                                ) {
+                                    String[] details = {
+                                            doc.get("organisation").toString(),
+                                            doc.get("email").toString(),
+                                            doc.get("phone").toString()
+                                    };
+                                    charityDoc.setValue(details);
+
+                                    Log.d(TAG, "Found charity with email: " + email);
+                                } else if (++count == task.getResult().size()) {
+                                    Log.d(TAG, "Failed to find charity with email: " + email);
+                                }
+                            }
+                        } else {
+                            Log.w(
+                                    TAG, "Error getting documents.",
+                                    task.getException());
+                        }
+                    }
+                });
     }
 }

@@ -66,6 +66,8 @@
             android:name=".Profile"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+
+        <!-- Charity Booking -->
         <activity
             android:name=".Booking_Time"
             android:theme="@style/AppTheme.NoActionBar">
