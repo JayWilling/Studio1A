@@ -8,7 +8,7 @@
     android:fitsSystemWindows="true"
     android:background="@drawable/bg">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:context=".Login">
@@ -17,61 +17,49 @@
             android:id="@+id/imageLogo"
             android:layout_width="114dp"
             android:layout_height="114dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="100dp"
             android:src="@drawable/logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/txtinputEmail"
-            android:layout_width="0dp"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputEmail"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageLogo">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/inputEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/prompt_email"
-                android:inputType="textEmailAddress" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/txtinputPassword"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/prompt_email"
+            android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtinputEmail">
+            app:layout_constraintTop_toBottomOf="@+id/imageLogo" />
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/inputPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/prompt_password"
-                android:inputType="textPassword" />
-        </android.support.design.widget.TextInputLayout>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/prompt_password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
 
         <TextView
             android:id="@+id/tvFailedLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/error_incorrect_credentials"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtinputPassword"
+            app:layout_constraintTop_toBottomOf="@+id/inputPassword"
             tools:visibility="visible" />
 
         <Button
@@ -95,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="8dp"
             android:onClick="onNoAccount"
             android:text="@string/btn_no_account"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -106,6 +94,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnUser" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

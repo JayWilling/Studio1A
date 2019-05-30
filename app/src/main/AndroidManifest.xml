@@ -69,7 +69,11 @@
 
         <!-- Charity Booking -->
         <activity
-            android:name=".Booking_Time"
+            android:name=".BookingTime"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ViewCalendar"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>

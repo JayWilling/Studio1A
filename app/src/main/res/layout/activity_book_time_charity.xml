@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Booking_Time"
+    tools:context=".BookingTime"
     >
 
     <com.google.android.material.appbar.AppBarLayout
@@ -22,7 +22,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_book_time_charity" />
+    <include layout="@layout/book_time_charity_content" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"

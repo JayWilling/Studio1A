@@ -8,271 +8,191 @@
     android:fitsSystemWindows="true"
     android:background="@drawable/bg">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:context=".RegisterCharity">
 
         <ImageView
             android:id="@+id/imageLogo"
-            android:layout_width="114dp"
-            android:layout_height="114dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="235dp"
+            android:layout_height="185dp"
             android:src="@drawable/logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/txtinputOrganisation"
-            android:layout_width="0dp"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputOrganisation"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/prompt_organisation"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageLogo" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/txtinputOrganisation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageLogo">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/inputOrganisation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/prompt_organisation"
-                android:inputType="text" />
-        </android.support.design.widget.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
             android:id="@+id/tvOrganisationRequirements"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="8dp"
             android:text="@string/error_invalid_name"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtinputOrganisation" />
+            app:layout_constraintTop_toBottomOf="@+id/inputOrganisation" />
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/txtinputEmail"
-            android:layout_width="0dp"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputEmail"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="@string/prompt_email"
+            android:inputType="textEmailAddress"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvOrganisationRequirements">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/inputEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/prompt_email"
-                android:inputType="textEmailAddress" />
-        </android.support.design.widget.TextInputLayout>
+            app:layout_constraintTop_toBottomOf="@+id/tvOrganisationRequirements" />
 
         <TextView
             android:id="@+id/tvEmailRequirements"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="8dp"
             android:text="@string/error_email_unavailable"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtinputEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/txtinputPhone"
-            android:layout_width="0dp"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputPhone"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="@string/prompt_phone"
+            android:inputType="phone"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvEmailRequirements">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/inputPhone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/prompt_phone"
-                android:inputType="phone" />
-        </android.support.design.widget.TextInputLayout>
+            app:layout_constraintTop_toBottomOf="@+id/tvEmailRequirements" />
 
         <TextView
             android:id="@+id/tvPhoneRequirements"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="8dp"
             android:text="@string/error_invalid_phone"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtinputPhone" />
+            app:layout_constraintTop_toBottomOf="@+id/inputPhone" />
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/txtinputPassword"
-            android:layout_width="0dp"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputPassword"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="@string/prompt_password"
+            android:inputType="textPassword"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvPhoneRequirements">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/inputPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/prompt_password"
-                android:inputType="textPassword" />
-        </android.support.design.widget.TextInputLayout>
+            app:layout_constraintTop_toBottomOf="@+id/tvPhoneRequirements" />
 
         <TextView
             android:id="@+id/tvPasswordRequirements"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginStart="8dp"
             android:text="@string/error_invalid_password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtinputPassword" />
+            app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/txtinputAddress"
-            android:layout_width="0dp"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputAddress"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:hint="@string/prompt_address"
+            android:inputType="textPostalAddress"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvPasswordRequirements">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/inputAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/prompt_address"
-                android:inputType="textPostalAddress" />
-        </android.support.design.widget.TextInputLayout>
+            app:layout_constraintTop_toBottomOf="@+id/tvPasswordRequirements" />
 
         <TextView
             android:id="@+id/tvAddressRequirements"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="8dp"
             android:text="@string/error_empty_field"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtinputAddress" />
+            app:layout_constraintTop_toBottomOf="@+id/inputAddress" />
 
-        <LinearLayout
-            android:id="@+id/hbox_state_postcode"
-            android:layout_width="0dp"
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputState"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:hint="@string/prompt_state"
+            android:inputType="textPostalAddress"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvAddressRequirements">
+            app:layout_constraintTop_toBottomOf="@+id/tvAddressRequirements" />
 
-            <android.support.constraint.ConstraintLayout
-                android:id="@+id/hbox_constraint"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputPostcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:hint="@string/prompt_postcode"
+            android:inputType="textNoSuggestions|number|textPostalAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStateRequirements" />
 
-                <android.support.constraint.Guideline
-                    android:id="@+id/hbox_vert_center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    app:layout_constraintGuide_begin="203dp" />
+        <TextView
+            android:id="@+id/tvStateRequirements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/error_empty_field"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputState" />
 
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/txtinputState"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    app:layout_constraintEnd_toStartOf="@+id/hbox_vert_center"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/tvPostcodeRequirements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/error_empty_field"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputPostcode" />
 
-                    <android.support.design.widget.TextInputEditText
-                        android:id="@+id/inputState"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/prompt_state"
-                        android:inputType="textPostalAddress" />
-
-                </android.support.design.widget.TextInputLayout>
-
-                <TextView
-                    android:id="@+id/tvStateRequirements"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="@string/error_empty_field"
-                    app:layout_constraintEnd_toStartOf="@+id/hbox_vert_center"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/txtinputState" />
-
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/txtinputPostcode"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/hbox_vert_center"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <android.support.design.widget.TextInputEditText
-                        android:id="@+id/inputPostcode"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/prompt_postcode"
-                        android:inputType="textNoSuggestions|number|textPostalAddress" />
-                </android.support.design.widget.TextInputLayout>
-
-                <TextView
-                    android:id="@+id/tvPostcodeRequirements"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="@string/error_empty_field"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/hbox_vert_center"
-                    app:layout_constraintTop_toBottomOf="@id/txtinputPostcode" />
-
-            </android.support.constraint.ConstraintLayout>
-
-        </LinearLayout>
 
         <Button
             android:id="@+id/btnCreateAccount"
-            android:layout_width="250dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/btn_round"
             android:onClick="onCreateAccount"
             android:text="@string/btn_create_account"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hbox_state_postcode" />
+            app:layout_constraintTop_toBottomOf="@+id/btnAlreadyMember" />
 
         <Button
             android:id="@+id/btnAlreadyMember"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"
             android:onClick="onAlreadyMember"
             android:text="@string/btn_already_member"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -281,8 +201,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnCreateAccount" />
+            app:layout_constraintTop_toBottomOf="@+id/inputPostcode" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

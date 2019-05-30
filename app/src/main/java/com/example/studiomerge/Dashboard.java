@@ -2,9 +2,10 @@ package com.example.studiomerge;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.studiomerge.lib.Constant;
 
@@ -27,6 +28,21 @@ public class Dashboard extends AppCompatActivity {
         Intent intent = new Intent(this, Profile.class);
         intent.putExtra(Constant.PROFILE_EMAIL, inputEmail.getText().toString());
 
+        startActivity(intent);
+    }
+
+    public void onBooking (View v) {
+        Intent intent = new Intent(this, BookingTime.class);
+        startActivity(intent);
+    }
+
+    public void openCalendar(View v) {
+        Intent intent = new Intent(this, ViewCalendar.class);
+        startActivity(intent);
+    }
+
+    public void viewBookings(View v) {
+        Intent intent = new Intent(this, ViewBookings.class);
         startActivity(intent);
     }
 }

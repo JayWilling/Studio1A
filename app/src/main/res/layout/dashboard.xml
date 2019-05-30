@@ -1,41 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/finallogo"
+    android:backgroundTint="#d3d3d3"
+    android:backgroundTintMode="src_over"
+    tools:context=".Dashboard">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is the dashboard."
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/helping_hands"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:onClick="onProfile"
-        android:text="View Profile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
-
-    <EditText
-        android:id="@+id/inputEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="355dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="Profile Email"
-        android:inputType="textPersonName"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/ic_round_button_light_orange"
+        android:fadingEdge="horizontal|vertical"
+        android:onClick="onBooking"
+        android:text="@string/book"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-</android.support.constraint.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+        <!-- Question: when someone books will it be a form or calendar? -->
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="355dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/ic_round_button_dark_orange"
+        android:fadingEdge="horizontal|vertical"
+        android:onClick="viewBookings"
+        android:text="@string/view"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="355dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/ic_round_button_black"
+        android:fadingEdge="horizontal|vertical"
+        android:onClick="openCalendar"
+        android:text="@string/calendar"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="355dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/searchview_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/message" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

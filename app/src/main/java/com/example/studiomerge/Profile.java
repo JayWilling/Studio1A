@@ -4,10 +4,12 @@ import android.content.Context;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.studiomerge.lib.Constant;
 import com.example.studiomerge.lib.MultiObservable;
@@ -42,6 +44,7 @@ public class Profile extends AppCompatActivity implements OnMapReadyCallback {
         // Initialise MapView widget
         SupportMapFragment mapFragment = (SupportMapFragment)
                 getSupportFragmentManager().findFragmentById(R.id.googleMap);
+        SupportMapFragment mapFrag = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.googleMap);
         mapFragment.getMapAsync(this);
 
         populateFields();

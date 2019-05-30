@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nestedScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".View_Bookings"
-    tools:showIn="@layout/activity_view__bookings">
+    tools:context=".ViewBookings"
+    tools:showIn="@layout/view_bookings">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="128dp"
-        android:paddingTop="32dp"
-        android:paddingRight="128dp"
         android:text="Your Bookings"
         android:textColor="#000000"
         android:textSize="24sp"
+        android:paddingTop="32dp"
+        android:paddingLeft="128dp"
+        android:paddingRight="128dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
