@@ -43,6 +43,11 @@ public class Dashboard extends AppCompatActivity {
 
     public void viewBookings(View v) {
         Intent intent = new Intent(this, ViewBookings.class);
+        intent.putExtra("currentEmail", getIntent().getExtras().getString("currentEmail"));
+        startActivity(intent);
+    }
+    public void onCharitySearch(View v) {
+        Intent intent = new Intent(this, Searching.class);
         startActivity(intent);
     }
 }

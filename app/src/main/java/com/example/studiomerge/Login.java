@@ -99,6 +99,7 @@ public class Login extends AppCompatActivity {
                                         Intent intent = new Intent(
                                                 getApplicationContext(),
                                                 Dashboard.class);
+                                        intent.putExtra("currentEmail", user.getEmail());
                                         startActivity(intent);
                                     } else {
                                         tvFailedLogin.setText(R.string.error_email_unverified);
